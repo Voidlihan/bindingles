@@ -1,0 +1,22 @@
+﻿<Window x:Class="BindingLesson.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BindingLesson"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--<TextBlock x:Name="textBlock" Text="{Binding ElementName=textBox, Path=Text}" Width="100" Height="22" Margin="20"/>
+        <TextBox x:Name="textBox" Width="100" Height="22" Margin="20"/>-->
+        <DataGrid PreviewKeyUp="OnRowDeleted" AutoGenerateColumns="False" Name="dataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Naimenovanie" Width="300"/>
+                <DataGridTextColumn Binding="{Binding Count}" Header="Colichestvo" Width="300"/>
+                <DataGridTextColumn Binding="{Binding Price}" Header="Cena" Width="300"/>
+                <DataGridTextColumn Header="Colichestvo" Width="80"/>
+                <DataGridTextColumn Header="Cena" Width="40"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
